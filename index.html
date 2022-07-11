@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <title>Almacenamiento Alumnos!</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="d-flex flex-column align-items-center">
+            <div class="col-8 text-center my-5">
+                <h2>Ingreso de datos</h2>
+                <form>
+                    <div class="form-row form-group">
+                        <div class="col">
+                            <input type="text" class="form-control" id="nombreAlumno" placeholder="Nombre">
+                            <div class="invalid-feedback">
+                                El nombre no puede contener numeros ni estar vacio
+                              </div>
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" id="apellidoAlumno" placeholder="Apellido">
+                            <div class="invalid-feedback">
+                                El apellido no puede contener numeros ni estar vacio
+                              </div>
+                        </div>
+                    </div>
+                    <div class="form-row form-group">
+                        <div class="col">
+                            <input type="number" class="form-control" placeholder="DNI" id="dniAlumno">
+                            <div class="invalid-feedback">
+                                El numero de DNI no puede coincidir con el DNI de otro alumno, ni estar vacio y no puede ser un numero negativo
+                              </div>
+                        </div>
+                        <div class="col">
+                            <input type="email" class="form-control" id="emailAlumno" placeholder="Email">
+                            <div class="invalid-feedback">
+                                El email no debe estar vacio y debe contener un "@" y un "."
+                              </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-primary btn-block form-group" id="botonAgregar" disabled >Agregar Alumno</button>
+
+                    <div class="form-row form-group">
+                        <div class="col">
+                            <input type="number" class="form-control" placeholder="DNI" id="eliminarAlumno">
+                            <div class="invalid-feedback">
+                                El numero de DNI debe coincidir con el DNI de algun alumno y el campo no puede estar vacio
+                              </div>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-danger btn-block" id="botonEliminar" disabled>Eliminar Alumno</button>
+                        </div>
+                    </div>
+
+                    <!-- <div class="form-row form-group">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Nombre" id="buscarAlumno">
+                            <div class="invalid-feedback">
+                                   Debe ingresar solamente nombres (apellido no), el campo no debe estar vacio ni contener numeros
+                                  </div>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-success btn-block" id="botonBuscar" disabled>Buscar Alumno</button>
+                        </div>
+                    </div> -->
+                </form>
+                <div class="col">
+                    <ul id="searchList" class="list-group">
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="col text-center mt-5">
+                <h2>Lista de alumnos</h2>
+                <ul id="mainList">
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.slim.js"
+  integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+
+    <script src="./js/script.js"></script>
+   
+    </script>
+</body>
+
+</html>
